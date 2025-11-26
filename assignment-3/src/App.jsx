@@ -24,7 +24,7 @@ const resolveInitialTheme = () => {
 };
 
 function App() {
-    const [theme, setTheme] = useState(resolveInitialTheme);
+    const [theme] = useState(resolveInitialTheme);
 
 
     useEffect(() => {

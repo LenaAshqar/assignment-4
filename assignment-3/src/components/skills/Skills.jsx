@@ -5,6 +5,8 @@ import sqlLogo from "../../assets/sql.png";
 import htmlLogo from "../../assets/html.png";
 import cssLogo from "../../assets/css.png";
 import jsLogo from "../../assets/js.png";
+import mongoLogo from "../../assets/mongo.svg";
+import nodeLogo from "../../assets/node.png";
 import "./Skills.css"
 
 const skills = [
@@ -24,6 +26,11 @@ const skills = [
         description: 'Efficient queries, modelling, and reporting for analytics-ready datasets.'
     },
     {
+        icon: mongoLogo,
+        name: 'MongoDB',
+        description: 'Flexible, document-based storage designed for scalability and rapid iteration.'
+    },
+    {
         icon: htmlLogo,
         name: 'HTML',
         description: 'Accessible semantic markup that keeps interfaces intuitive for everyone.'
@@ -37,6 +44,11 @@ const skills = [
         icon: jsLogo,
         name: 'JavaScript',
         description: 'Interactive front-end experiences with a focus on performance and DX.'
+    },
+    {
+        icon: nodeLogo,
+        name: 'Node.js',
+        description: 'Server-side runtime for building fast, scalable network applications and APIs.'
     }
 ];
 
