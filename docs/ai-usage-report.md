@@ -62,16 +62,25 @@
 
 ## 🧠 6. AI Enhancement Feature in the Portfolio
 
+### **Feature:** 💬 *----------- NEW ----------* *GitHub Repository API*      
+- **AI Usage:** ChatGPT provided the code to integrate GitHub API into the portfolio..
+- **Implementation:**
+    - I provided the code to my project cards component and explained that I wanted a similar looking component to display my repositories.
+    - AI-generated a component with the GitHub API fetching logic and matching UI to the projects section.
+- **Prompt:** Given this project card component I want to create a similar component that displays my latest GitHub repositories using the GitHub API.
+- **Value:** Gives the portfolio a better looking design than what I can come up with on my own.
+
+###
 ### **Feature:** ✨ *UI Design*
 - **AI Usage:** Codex took my already existing project and changed the design to match the example sites I provided.
 - **Implementation:**
     - I provided the link to my repository and some portfolio sites I liked the designs of.
     - AI-generated a version of my code with design elements that match what I was aiming for without strictly copying the examples I provided.
-- **Prompt:** Transform the portfolio in this respository to match the following example sites in terms of design without strictly copying any of them. (After this I did not need to include my repository link with other prompts.)
-- **Value:** Gives the portfolio a better looking design than what I can come up with on my own.
+- **Prompt:** Transform the portfolio in this repository to match the following example sites in terms of design without strictly copying any of them. (After this I did not need to include my repository link with other prompts.)
+- **Value:** Fetching GitHub projects make the portfolio feel “live” and up-to-date.
 
 ###
-### **Feature:** 🕒 *Smart Greeting Form Assistance*
+### **Feature:** 🕒 *Smart Greeting*
 - **AI Usage:** Codex generated dynamic greeting logic and suggested contextual form helper text.
 - **Implementation:**
     - Greeting changes based on local time (`Good morning`, `Good afternoon`, `Good evening`).
