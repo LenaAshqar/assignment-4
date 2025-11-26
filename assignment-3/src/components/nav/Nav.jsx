@@ -29,7 +29,6 @@ function Nav(){
     const navMenuId = useId();
     const navRef = useRef(null);
 
-
     useEffect(() => {
         const root = document.documentElement;
         root.dataset.theme = theme;
