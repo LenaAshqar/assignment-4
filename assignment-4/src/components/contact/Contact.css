@@ -1,0 +1,213 @@
+.contact-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2rem, 6vw, 3rem);
+}
+
+.contact-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(250, 2, 126, 0.22), transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contact-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.75rem, 4vw, 3rem);
+}
+
+.contact-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-copy h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4.5vw, 2.6rem);
+}
+
+.contact-copy p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.contact-details {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+    color: rgba(232, 233, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+.contact-details a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-row label {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-row input,
+.form-row textarea {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    background: rgba(8, 10, 28, 0.65);
+    padding: 0.85rem 1rem;
+    color: var(--text-primary);
+    transition: border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: rgba(250, 2, 126, 0.45);
+    box-shadow: 0 0 0 3px rgba(250, 2, 126, 0.12);
+}
+
+.form-row.has-error input,
+.form-row.has-error textarea {
+    border-color: rgba(250, 53, 96, 0.65);
+    box-shadow: 0 0 0 3px rgba(250, 53, 96, 0.18);
+}
+
+.error-text {
+    font-size: 0.8rem;
+    color: rgba(255, 169, 184, 0.9);
+    line-height: 1.4;
+    animation: message-pop 0.4s ease;
+}
+
+.submit-button {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(135deg, rgba(117, 73, 161, 0.95), rgba(0, 104, 243, 0.9));
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+    box-shadow: none;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 104, 243, 0.3);
+}
+
+.form-msg {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.form-msg.is-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-msg--success {
+    color: rgba(148, 255, 208, 0.85);
+}
+
+.form-msg--error {
+    color: rgba(255, 169, 184, 0.9);
+}
+
+.form-msg--pending {
+    color: rgba(164, 201, 255, 0.9);
+}
+
+@keyframes message-pop {
+    0% {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .submit-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+[data-theme='light'] .contact-card::after {
+    background: radial-gradient(circle at top right, rgba(0, 104, 243, 0.18), transparent 70%);
+}
+
+[data-theme='light'] .contact-details {
+    color: rgba(32, 36, 78, 0.82);
+}
+
+[data-theme='light'] .contact-details a {
+    color: var(--accent);
+}
+
+[data-theme='light'] .form-row label {
+    color: rgba(21, 24, 64, 0.72);
+}
+
+[data-theme='light'] .form-row input,
+[data-theme='light'] .form-row textarea {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(14, 20, 64, 0.18);
+    color: var(--text-primary);
+}
+
+[data-theme='light'] .form-row input:focus,
+[data-theme='light'] .form-row textarea:focus {
+    box-shadow: 0 0 0 3px rgba(0, 104, 243, 0.16);
+}
+
+[data-theme='light'] .submit-button {
+    background: linear-gradient(135deg, rgba(0, 104, 243, 0.9), rgba(117, 73, 161, 0.9));
+}
