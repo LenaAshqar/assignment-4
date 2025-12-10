@@ -1,4 +1,4 @@
-# 🌟 SWE 363 – Assignment 3
+# 🌟 SWE 363 – Assignment 4
 
 > ✨ A responsive **personal portfolio web application** built as part of the SWE 363 course.  
 > 🌗 Featuring a **dark/light theme**, time-based greetings, project filtering and sorting, simple form validation, and modern responsive design.
@@ -48,16 +48,15 @@ This project implements a **personal portfolio** website to showcase:
 ## 🤖 AI / Assistance Usage
 
 - 🧠 **ChatGPT** for debugging and generating GitHub API section.
-- 📄 Detailed usage is documented in [`ai-usage-report.md`](./ai-usage-report.md).
+- 📄 Detailed usage is documented in [`ai-usage-report.md`](./docs/ai-usage-report.md).
 
 ---
 
 ## 📂 File Structure
 
     ```plaintext
-    assignment-3/                    ← repository root
-    ├─ .idea/                        ← IDE project settings
-    ├─ assignment-3/                 ← application source lives here
+    assignment-4/                    ← repository root
+    ├─ assignment-4/                 ← application source lives here
     │  ├─ node_modules/              ← installed dependencies
     │  ├─ src/                       ← components, styles, assets, entry files
     │  │  ├─ assets/                 ← images, icons, etc.
@@ -70,7 +69,10 @@ This project implements a **personal portfolio** website to showcase:
     ├─ docs/
     │    ├─ ai-usage-report
     │    └─ technical-report
-    ├─ package.json              ← scripts & dependencies (root)
+    ├─ presentation/
+    │    ├─ slides.pdf
+    │    └─ demo-video.mp4
+    ├─ package.json                 ← scripts & dependencies (root)
     ├─ package-lock.json
     └─ README.md
 
@@ -81,11 +83,11 @@ Follow these steps to run the project locally:
 
 1. Clone the repository  
    ```bash  
-   git clone https://github.com/LenaAshqar/assignment-3.git
+   git clone https://github.com/LenaAshqar/assignment-4.git
 
 2. Cd into the project directory
    ```bash  
-   cd "/assignment-3"
+   cd "/assignment-4"
 
 3. Install npm  
    ```bash  
